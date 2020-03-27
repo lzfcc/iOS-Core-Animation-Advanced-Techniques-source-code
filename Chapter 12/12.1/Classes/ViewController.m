@@ -7,12 +7,13 @@
 
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "YYFPSLabel.h"
 
 @interface ViewController () <UITableViewDataSource>
 
 @property (nonatomic, copy) NSArray *items;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
-
+@property (nonatomic, strong) YYFPSLabel *fpsLabel;
 @end
 
 @implementation ViewController
@@ -52,6 +53,12 @@
     //register cell class
     [self.tableView registerClass:[UITableViewCell class]
                                    forCellReuseIdentifier:@"Cell"];
+
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    _fpsLabel = [YYFPSLabel new];
+    _fpsLabel.frame = CGRectMake(screenSize.width / 2 - 25, screenSize.height - 30, 50, 30);
+    [_fpsLabel sizeToFit];
+    [self.view addSubview:_fpsLabel];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -77,6 +84,9 @@
     cell.imageView.image = [UIImage imageWithContentsOfFile:filePath];
     cell.textLabel.text = item[@"name"];
 
+    // set corner radius
+    cell.imageView.layer.cornerRadius = 5.0;
+
     //set image shadow
     cell.imageView.layer.shadowOffset = CGSizeMake(0, 5);
     cell.imageView.layer.shadowOpacity = 0.75;
@@ -86,7 +96,10 @@
     cell.textLabel.backgroundColor = [UIColor clearColor];
     cell.textLabel.layer.shadowOffset = CGSizeMake(0, 2);
     cell.textLabel.layer.shadowOpacity = 0.5;
-    
+
+//    cell.layer.shouldRasterize = YES;
+    cell.layer.rasterizationScale = [UIScreen mainScreen].scale;
+
     return cell;
 }
 

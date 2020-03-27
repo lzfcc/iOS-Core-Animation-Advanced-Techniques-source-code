@@ -24,6 +24,8 @@
 		01F7243416BEBAF400DB1F0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F7243316BEBAF400DB1F0E /* Foundation.framework */; };
 		01F7243616BEBAF400DB1F0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F7243516BEBAF400DB1F0E /* CoreGraphics.framework */; };
 		01F7245516BEBB6000DB1F0E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F7245416BEBB6000DB1F0E /* QuartzCore.framework */; };
+		961A33402433582B0009225B /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 961A333F2433582B0009225B /* YYFPSLabel.m */; };
+		BA81C1EB56CF85F1C11E3741 /* Pods_Performance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BBB48B9A864FDF772957C4 /* Pods_Performance.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,11 @@
 		01F7243316BEBAF400DB1F0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		01F7243516BEBAF400DB1F0E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		01F7245416BEBB6000DB1F0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		17BBB48B9A864FDF772957C4 /* Pods_Performance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Performance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55088F40B4137F494040F66F /* Pods-Performance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Performance.release.xcconfig"; path = "Target Support Files/Pods-Performance/Pods-Performance.release.xcconfig"; sourceTree = "<group>"; };
+		961A333E2433582B0009225B /* YYFPSLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		961A333F2433582B0009225B /* YYFPSLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		AC516297B753A68298724798 /* Pods-Performance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Performance.debug.xcconfig"; path = "Target Support Files/Pods-Performance/Pods-Performance.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +67,7 @@
 				01F7243216BEBAF400DB1F0E /* UIKit.framework in Frameworks */,
 				01F7243416BEBAF400DB1F0E /* Foundation.framework in Frameworks */,
 				01F7243616BEBAF400DB1F0E /* CoreGraphics.framework in Frameworks */,
+				BA81C1EB56CF85F1C11E3741 /* Pods_Performance.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +83,8 @@
 				01DFB6BF16CC4CDE006A7A9F /* ViewController.m */,
 				019D9CA317189278000E8594 /* ViewController.xib */,
 				01DFB6C916CC4CE8006A7A9F /* Supporting Files */,
+				961A333E2433582B0009225B /* YYFPSLabel.h */,
+				961A333F2433582B0009225B /* YYFPSLabel.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -112,6 +122,7 @@
 				01DFB6B516CC4CDE006A7A9F /* Classes */,
 				01F7243016BEBAF400DB1F0E /* Frameworks */,
 				01F7242F16BEBAF400DB1F0E /* Products */,
+				481C74CD1B161D98AD4D3485 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,8 +141,18 @@
 				01F7243316BEBAF400DB1F0E /* Foundation.framework */,
 				01F7243516BEBAF400DB1F0E /* CoreGraphics.framework */,
 				01F7245416BEBB6000DB1F0E /* QuartzCore.framework */,
+				17BBB48B9A864FDF772957C4 /* Pods_Performance.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		481C74CD1B161D98AD4D3485 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC516297B753A68298724798 /* Pods-Performance.debug.xcconfig */,
+				55088F40B4137F494040F66F /* Pods-Performance.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01F7245116BEBAF400DB1F0E /* Build configuration list for PBXNativeTarget "Performance" */;
 			buildPhases = (
+				C7130A36D3713425DB1DBE6F /* [CP] Check Pods Manifest.lock */,
 				01F7242A16BEBAF400DB1F0E /* Sources */,
 				01F7242B16BEBAF400DB1F0E /* Frameworks */,
 				01F7242C16BEBAF400DB1F0E /* Resources */,
+				8B8669789EAD8806EDA0C562 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,6 +229,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8B8669789EAD8806EDA0C562 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Performance/Pods-Performance-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Performance/Pods-Performance-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7130A36D3713425DB1DBE6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Performance-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		01F7242A16BEBAF400DB1F0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -213,6 +279,7 @@
 			files = (
 				01DFB6C116CC4CDE006A7A9F /* AppDelegate.m in Sources */,
 				01DFB6C616CC4CDE006A7A9F /* main.m in Sources */,
+				961A33402433582B0009225B /* YYFPSLabel.m in Sources */,
 				01DFB6C716CC4CDE006A7A9F /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +349,7 @@
 		};
 		01F7245216BEBAF400DB1F0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC516297B753A68298724798 /* Pods-Performance.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = WWLN8L56Y5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -296,6 +364,7 @@
 		};
 		01F7245316BEBAF400DB1F0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55088F40B4137F494040F66F /* Pods-Performance.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = WWLN8L56Y5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
