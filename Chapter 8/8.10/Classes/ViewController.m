@@ -57,6 +57,7 @@
     CAAnimationGroup *groupAnimation = [CAAnimationGroup animation];
     groupAnimation.animations = @[animation1, animation2];
     groupAnimation.duration = 4.0;
+    groupAnimation.repeatCount = INT_MAX;
     
     //add the animation to the color layer
     [colorLayer addAnimation:groupAnimation forKey:nil];

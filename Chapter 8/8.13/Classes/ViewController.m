@@ -32,7 +32,7 @@
 {    
     [UIView transitionWithView:self.imageView
                       duration:1.0
-                       options:UIViewAnimationOptionTransitionFlipFromLeft
+                       options:UIViewAnimationOptionTransitionCurlUp
                     animations:^{
         
         //cycle to next image
@@ -42,6 +42,7 @@
         self.imageView.image = self.images[index];
         
     } completion:NULL];
+
 }
 
 @end

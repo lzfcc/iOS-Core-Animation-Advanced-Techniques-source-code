@@ -33,6 +33,7 @@
     //set up crossfade transition
     CATransition *transition = [CATransition animation];
     transition.type = kCATransitionFade;
+    transition.subtype = kCATransitionFromBottom;
     
     //apply transition to imageview backing layer
     [self.imageView.layer addAnimation:transition forKey:nil];

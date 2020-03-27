@@ -32,6 +32,7 @@
     animation.keyPath = @"transform.rotation";
     animation.duration = 2.0;
     animation.byValue = @(M_PI * 2);
+    animation.repeatCount = 100;
     [shipLayer addAnimation:animation forKey:nil];
 }
 

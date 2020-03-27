@@ -164,12 +164,18 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Charcoal Design";
+				TargetAttributes = {
+					0150006716FFBF8300819AE4 = {
+						DevelopmentTeam = WWLN8L56Y5;
+					};
+				};
 			};
 			buildConfigurationList = 0150006316FFBF8300819AE4 /* Build configuration list for PBXProject "TabBarTransition" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 0150005F16FFBF8300819AE4;
@@ -281,9 +287,11 @@
 		0150009A16FFBF8300819AE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = WWLN8L56Y5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/TabBarTransition-Prefix.pch";
 				INFOPLIST_FILE = "Classes/TabBarTransition-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -292,9 +300,11 @@
 		0150009B16FFBF8300819AE4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = WWLN8L56Y5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/TabBarTransition-Prefix.pch";
 				INFOPLIST_FILE = "Classes/TabBarTransition-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

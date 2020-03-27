@@ -10,7 +10,9 @@
 
 @interface ViewController ()
 
-@property (nonatomic, weak) IBOutlet UIView *containerView;
+//@property (nonatomic, weak) IBOutlet UIView *containerView;
+
+@property (nonatomic, strong) UIView *containerView;
 
 @end
 
@@ -19,6 +21,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+
+    self.containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, screenSize.height)];
+    self.containerView.backgroundColor = UIColor.grayColor;
+    [self.view addSubview:self.containerView];
     
     //create a path
     UIBezierPath *bezierPath = [[UIBezierPath alloc] init];
