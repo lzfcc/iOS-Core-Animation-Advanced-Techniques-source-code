@@ -156,6 +156,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 01F7242516BEBAF400DB1F0E;
@@ -264,6 +265,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/RoundedCorners-Prefix.pch";
 				INFOPLIST_FILE = "Classes/RoundedCorners-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = RoundedCorners;
 				WRAPPER_EXTENSION = app;
 			};
@@ -275,6 +277,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/RoundedCorners-Prefix.pch";
 				INFOPLIST_FILE = "Classes/RoundedCorners-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = RoundedCorners;
 				WRAPPER_EXTENSION = app;
 			};

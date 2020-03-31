@@ -20,6 +20,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     //create array
     self.strokes = [NSMutableArray array];
     

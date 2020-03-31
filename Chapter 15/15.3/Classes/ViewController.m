@@ -60,7 +60,9 @@
             }
         }
     }
-    
+
+    self.scrollView.layer.shouldRasterize = YES;
+
     //log
     NSLog(@"displayed: %i", DEPTH*HEIGHT*WIDTH);
 }

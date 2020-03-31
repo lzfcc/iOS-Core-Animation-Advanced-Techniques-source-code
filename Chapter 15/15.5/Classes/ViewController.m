@@ -131,8 +131,8 @@
     self.scrollView.layer.sublayers = visibleLayers;
     
     //log
-    NSLog(@"displayed: %i/%i recycled: %i",
-          [visibleLayers count], DEPTH*HEIGHT*WIDTH, recycled);
+    NSLog(@"displayed: %lu/%i recycled: %li",
+          (unsigned long)[visibleLayers count], DEPTH*HEIGHT*WIDTH, (long)recycled);
 }
 
 @end

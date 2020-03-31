@@ -27,6 +27,7 @@
     //add label
     frame = CGRectMake(20, 10, 110, 30);
     UILabel *label = [[UILabel alloc] initWithFrame:frame];
+//    label.backgroundColor = [UIColor greenColor];
     label.text = @"Hello World";
     label.textAlignment = NSTextAlignmentCenter;
     [button addSubview:label];
@@ -46,12 +47,13 @@
     //create translucent button
     UIButton *button2 = [self customButton];
     button2.center = CGPointMake(250, 150);
-    button2.alpha = 0.5;
-    [self.containerView addSubview:button2];
     
     //enable rasterization for the translucent button
-    //button2.layer.shouldRasterize = YES;
-    //button2.layer.rasterizationScale = [UIScreen mainScreen].scale;
+//    button2.layer.shouldRasterize = YES;
+//    button2.layer.rasterizationScale = [UIScreen mainScreen].scale;
+
+    button2.alpha = 0.5;
+    [self.containerView addSubview:button2];
 }
 
 @end
